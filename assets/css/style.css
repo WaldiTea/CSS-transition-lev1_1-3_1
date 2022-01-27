@@ -1,0 +1,123 @@
+h3 {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.container {
+  height: 70px;
+  border-top: 4px solid black;
+  border-left: 4px solid black;
+  margin-bottom: 5rem;
+}
+
+.red-bar {
+  width: 50px;
+  height: 50px;
+  background: red;
+  margin: 2px;
+  transition: all 1s;
+}
+
+.red-bar:hover {
+  width: 100%;
+}
+
+.cube-container {
+  height: 130px;
+  background: #e5e5e5;
+  position: relative;
+}
+
+.cube-container:hover > .red-cube,
+.cube-container:hover > .green-cube {
+  left: 90%;
+}
+
+.cube {
+  width: 50px;
+  height: 50px;
+  margin: 3px;
+  position: absolute;
+}
+
+.red-cube {
+  background: red;
+  top: 0;
+  left: 0;
+  transition: all 4s ease-out;
+}
+
+.cube-container:hover > .red-cube {
+  left: 90%;
+}
+
+.green-cube {
+  background: green;
+  top: 53px;
+  left: 0;
+  transition: all 3s 1s ease-in-out;
+}
+
+.wrapper {
+  width: 50%;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.wrapper-content {
+  width: 400px;
+  height: 400px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 2rem;
+  display: grid;
+  place-items: center;
+  position: absolute;
+  top: 100%;
+  transition: all 0.5s;
+}
+
+.wrapper:hover > .wrapper-content {
+  top: 0;
+}
+
+.ball-container {
+  height: 143px;
+  position: relative;
+}
+
+.ball {
+  border-radius: 50%;
+  margin: 2px;
+  position: absolute;
+  bottom: 0;
+}
+
+.ball-big {
+  display: grid;
+  place-items: center;
+  width: 140px;
+  height: 140px;
+  background: violet;
+  left: 0;
+  transition: all 1s 2s;
+}
+
+.ball-big:active {
+  left: 13%;
+  transition: all 1s ease-in;
+}
+
+.ball-big:active + .ball-small {
+  left: 92%;
+  transition: all 2s 1s;
+}
+
+.ball-small {
+  width: 50px;
+  height: 50px;
+  background: darkslateblue;
+  left: 30%;
+  transition: all 2s;
+}
